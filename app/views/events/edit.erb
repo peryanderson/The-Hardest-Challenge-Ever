@@ -1,0 +1,27 @@
+<h1>Edit This Event</h1>
+  <form action="/events/<%= @event.id %>" method="POST">
+    <input type="hidden" name="_method" value="PUT" />
+    <li>
+    <label for="event_name">Title</label>
+    <input id="event_name" type="text" name="event[name]" value="<%= @event.name %>"/>
+    </li>
+    <li>
+    <label for="event_location">Location</label>
+    <input id="event_location" type="text" name="event[location]" value="<%= @event.location %>"/>
+    </li>
+    <li>
+    <label for="event_starts_at">Start</label>
+    <input id="event_starts_at" type="datetime-local" name="event[starts_at]" value="<%= @event.starts_at %>"/>
+    </li>
+    <li>
+    <label for="event_ends_at">End</label>
+    <input id="event_ends_at" type="datetime-local" name="event[ends_at]" value="<%= @event.ends_at %>"/>
+    </li>
+    <input type="submit" value="Update" name="update"/>
+  </form>
+<%= @message %>
+
+<form action="/events/<%= @event.id %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE" />
+    <input type="submit" value="Delete Event" />
+  </form>

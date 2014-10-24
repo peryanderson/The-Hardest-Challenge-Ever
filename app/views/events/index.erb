@@ -1,0 +1,44 @@
+<div class="container">
+  <h2>Here's a list of your events, click one's title to view it</h2>
+
+<%@user_events.each do |event|  %>
+<ul>
+  <a href = "/events/<%=event.id%>" > <%= event.name%></a><br>
+  <%=event.location %><br>
+  <%=event.starts_at %><br>
+  <%=event.ends_at %><br><br><br>
+</ul>
+<%end%>
+
+
+<form action= "/events/new" method="get">
+  <input type="submit" value="Create an Event" name="create"/>
+</form>
+
+
+
+<h3>New Event form</h3>
+  <form id= "create_event" action="/events" method="POST">
+    <li>
+    <label for="event_name">Title</label>
+    <input id="event_name" type="text" name="event[name]"/>
+    </li>
+    <li>
+    <label for="event_location">Location</label>
+    <input id="event_location" type="text" name="event[location]"/>
+    </li>
+    <li>
+    <label for="event_starts_at">Start</label>
+    <input id="event_starts_at" type="datetime-local" name="event[starts_at]"/>
+    </li>
+    <li>
+    <label for="event_ends_at">End</label>
+    <input id="event_ends_at" type="datetime-local" name="event[ends_at]"/>
+    </li>
+    <input type="submit" value="Create" name="create"/>
+  </form>
+<%= @message %>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/form.js"></script>
+</div>

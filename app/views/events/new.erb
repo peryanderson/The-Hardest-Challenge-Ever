@@ -1,0 +1,21 @@
+<h1>Create an Event</h1>
+  <form action="/events" method="POST">
+    <li>
+    <label for="event_name">Title</label>
+    <input id="event_name" type="text" name="event[name]"/>
+    </li>
+    <li>
+    <label for="event_location">Location</label>
+    <input id="event_location" type="text" name="event[location]"/>
+    </li>
+    <li>
+    <label for="event_starts_at">Start</label>
+    <input id="event_starts_at" type="datetime-local" name="event[starts_at]"/>
+    </li>
+    <li>
+    <label for="event_ends_at">End</label>
+    <input id="event_ends_at" type="datetime-local" name="event[ends_at]"/>
+    </li>
+    <input type="submit" value="Create" name="create"/>
+  </form>
+<%= @message %>
