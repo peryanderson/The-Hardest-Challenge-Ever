@@ -11,7 +11,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :first_name, :null => false
       t.string :last_name, :null => false
       t.string :email, :null => false
-      t.date :birthdate, :null => false
+      t.integer :high_score
       t.string :hashed_password, :null => false
       t.timestamps
     end

@@ -1,0 +1,12 @@
+
+<h1><%= @event.name%></h1><br>
+  <%=@event.location %><br>
+  <%=@event.starts_at %><br>
+  <%=@event.ends_at %><br><br><br>
+
+<%@event.attendees.each do |user| %>
+  <%=user.first_name%> <%=user.last_name%><br>
+<%end%>
+<form action= "/events/<%=@event.id%>/edit" method="get">
+  <input type="submit" value="Edit this event" name="edit"/>
+</form>

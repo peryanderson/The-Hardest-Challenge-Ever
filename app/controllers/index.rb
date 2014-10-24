@@ -1,6 +1,7 @@
-
 get '/' do
-  # Look in app/views/index.erb
+  erb :"index"
+end
 
-  erb :"users/index"
+get '/users' do
+erb :"/users/index"
 end
