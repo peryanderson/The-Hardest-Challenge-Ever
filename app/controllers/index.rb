@@ -3,5 +3,9 @@ get '/' do
 end
 
 get '/users' do
-erb :"/users/index"
+  if authenticated?
+    redirect '/games'
+  else
+    erb :"/users/index"
+  end
 end

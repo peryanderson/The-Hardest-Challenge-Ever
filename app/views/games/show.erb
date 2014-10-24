@@ -1,12 +1,41 @@
+<head>
+<h1>This is a Placeholder to get gamequery working<h2>
+    <title>My gameQuery</title>
+<!--
+<script type="text/javascript" src="http://gamequeryjs.com/api/gamequery.api.helper.js"></script>
+<script type="text/javascript"></script> -->
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js?ver=4.0'></script>
+<script type="text/javascript" src="http://cdn.gamequeryjs.com/jquery.gamequery.js"></script>
+<script type="text/javascript" src="js/game.js"></script>
+<style type="text/css">
 
-<h1><%= @event.name%></h1><br>
-  <%=@event.location %><br>
-  <%=@event.starts_at %><br>
-  <%=@event.ends_at %><br><br><br>
 
-<%@event.attendees.each do |user| %>
-  <%=user.first_name%> <%=user.last_name%><br>
-<%end%>
-<form action= "/events/<%=@event.id%>/edit" method="get">
-  <input type="submit" value="Edit this event" name="edit"/>
-</form>
+
+
+      html,body{
+        margin: 0;
+        padding: 0;
+        background: white;
+      }
+      #container{
+        width: 720px;
+        margin: 0;
+        padding: 0;
+        background: black;
+      }
+    </style>
+  </head>
+  <body>
+  <div id="container">
+  <div id="playground" style="width: 900px; height: 400px; background: black;">
+    <!-- <div id="welcomeScreen" style="width: 900px; height: 400px; position: absolute; z-index: 100; content: url(logo.png); font-family: verdana, sans-serif;"> -->
+      <div style="position: absolute; top: 120px; width: 900px; color: white;">
+<!--         <div id="loadingBar" style="position: relative; left: 100px; height: 15px; width: 0px; background: red;"></div><br /> -->
+        <center><a style="cursor: pointer;" id="startbutton">Click here to start!</a></center>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <img src = "images/metal.png"></img> -->
+  </body>
+</html>

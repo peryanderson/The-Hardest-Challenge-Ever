@@ -12,7 +12,7 @@ get '/games' do
   #     @user_events << event
   #   end
   # end
-  erb :"/games/index"
+  erb :"/games/show"
 end
 
 
