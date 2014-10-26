@@ -37,5 +37,12 @@
   </div>
 </div>
 <!-- <img src = "images/metal.png"></img> -->
+<% if authenticated? %>
+<form action="/logout" method="post">
+  <input type="hidden" name="_method" value="delete" />
+  <input type="submit" value="Logout"
+         name="logout"/>
+</form>
+<%end%>
   </body>
 </html>

@@ -33,5 +33,5 @@ end
 
 delete '/logout' do
   session.delete(:user_id)
-  redirect '/'
+  redirect '/users'
 end

@@ -3,9 +3,6 @@ get '/' do
 end
 
 get '/users' do
-  if authenticated?
-    redirect '/games'
-  else
-    erb :"/users/index"
-  end
+ @user = User.new
+  erb :"/users/index"
 end
